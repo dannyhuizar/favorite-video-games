@@ -31,6 +31,17 @@
         justify-content: space-evenly;
         align-items: center;
       }
+      .button-div {
+        display: flex;
+        justify-content: center;
+      }
+      .rounded-button {
+          background-color: #a2c11c;
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 10px;
+      }
     </style>
   </head>
   <body>
@@ -128,9 +139,26 @@
       </a>
       </div>
     </div>
+    <div class="button-div">
+    <button type="button" class="rounded-button">Are You a Gamer?</button>
+  </div>
   </div>
     <script>
-      <!-- alert("hello world"); -->
+      function order() {
+        let game = prompt("What is your favorite video game?");
+        let consoles = prompt("What consoles do you own?");
+        let name = prompt("What is your first name?");
+        let gamerTag = prompt("What is your gamer tag?");
+
+        alert(
+          "That's awesome, " +
+            name +
+            "! I see that your favorite game is " + game + "! " + "I also see that you own these consoles: " + consoles + "! " + "I like your gamer tag, " + gamerTag + "! I hope we get to play a game together!"
+        );
+      }
+
+      let button = document.querySelector(".rounded-button");
+      button.addEventListener("click", order);
     </script>
   </body>
 </html>
